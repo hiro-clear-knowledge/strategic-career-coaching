@@ -1,0 +1,1206 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>30代後半・40代ハイクラスの市場価値翻訳</title>
+  <style>
+    #market-value-translation-20260506230840,
+    #market-value-translation-20260506230840 * {
+      box-sizing: border-box;
+    }
+
+    #market-value-translation-20260506230840 {
+      --ink: #18222f;
+      --muted: #5a6472;
+      --line: #dce3ec;
+      --paper: #ffffff;
+      --soft: #f2f7fb;
+      --navy: #073763;
+      --blue: #0d67ad;
+      --yellow: #ffd84d;
+      --yellow-deep: #e8b900;
+      --mint: #e2f3f8;
+      --coral: #f28b4b;
+      --shadow: 0 18px 45px rgba(24, 34, 47, 0.13);
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+      line-height: 1.78;
+      letter-spacing: 0;
+      overflow: hidden;
+    }
+
+    #market-value-translation-20260506230840 a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    #market-value-translation-20260506230840 button {
+      font: inherit;
+    }
+
+    #market-value-translation-20260506230840 .mv-wrap {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    #market-value-translation-20260506230840 .mv-topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 255, 255, 0.94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(10px);
+    }
+
+    #market-value-translation-20260506230840 .mv-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 76px;
+      gap: 24px;
+    }
+
+    #market-value-translation-20260506230840 .mv-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 900;
+      color: var(--navy);
+      line-height: 1.25;
+    }
+
+    #market-value-translation-20260506230840 .mv-brand-mark {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 7px;
+      background: var(--yellow);
+      color: var(--navy);
+      font-size: 18px;
+      box-shadow: 6px 6px 0 var(--navy);
+    }
+
+    #market-value-translation-20260506230840 .mv-menu {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    #market-value-translation-20260506230840 .mv-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 12px 24px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--coral);
+      color: #fff;
+      font-weight: 900;
+      box-shadow: 0 9px 0 #c94d3b, var(--shadow);
+      cursor: pointer;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+      text-align: center;
+    }
+
+    #market-value-translation-20260506230840 .mv-button:hover {
+      transform: translateY(3px);
+      box-shadow: 0 6px 0 #c94d3b, var(--shadow);
+    }
+
+    #market-value-translation-20260506230840 .mv-button.mv-yellow {
+      background: var(--yellow);
+      color: var(--navy);
+      box-shadow: 0 9px 0 var(--yellow-deep), var(--shadow);
+    }
+
+    #market-value-translation-20260506230840 .mv-button.mv-yellow:hover {
+      box-shadow: 0 6px 0 var(--yellow-deep), var(--shadow);
+    }
+
+    #market-value-translation-20260506230840 .mv-hero {
+      position: relative;
+      min-height: 560px;
+      background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.98) 0%, rgba(244, 250, 255, 0.94) 38%, rgba(244, 250, 255, 0.48) 58%, rgba(255, 255, 255, 0) 78%),
+        linear-gradient(135deg, #eef8ff 0%, #ffffff 100%);
+    }
+
+    #market-value-translation-20260506230840 .mv-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(13, 103, 173, 0.08), rgba(13, 103, 173, 0));
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    #market-value-translation-20260506230840 .mv-hero-grid {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 620px;
+      padding: 58px 0 64px;
+    }
+
+    #market-value-translation-20260506230840 .mv-hero-copy {
+      position: relative;
+      z-index: 3;
+      width: min(560px, 58%);
+    }
+
+    #market-value-translation-20260506230840 .mv-hero-photo {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    #market-value-translation-20260506230840 .mv-hero-photo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 560px;
+      object-fit: cover;
+      object-position: center right;
+    }
+
+    #market-value-translation-20260506230840 .mv-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      color: var(--blue);
+      font-size: clamp(16px, 2vw, 23px);
+      font-weight: 900;
+      line-height: 1.35;
+    }
+
+    #market-value-translation-20260506230840 .mv-kicker::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--coral);
+    }
+
+    #market-value-translation-20260506230840 h1,
+    #market-value-translation-20260506230840 h2,
+    #market-value-translation-20260506230840 h3,
+    #market-value-translation-20260506230840 p {
+      margin: 0;
+    }
+
+    #market-value-translation-20260506230840 .mv-hero h1 {
+      margin-top: 22px;
+      font-size: clamp(40px, 6.3vw, 76px);
+      line-height: 1.08;
+      font-weight: 950;
+      color: var(--navy);
+    }
+
+    #market-value-translation-20260506230840 .mv-hero h1 span {
+      display: inline;
+      color: #bf9a35;
+      background: none;
+    }
+
+    #market-value-translation-20260506230840 .mv-lead {
+      margin-top: 12px;
+      max-width: 520px;
+      color: var(--navy);
+      font-size: clamp(20px, 2.4vw, 30px);
+      font-weight: 950;
+      line-height: 1.36;
+    }
+
+    #market-value-translation-20260506230840 .mv-hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px;
+      margin-top: 32px;
+    }
+
+    #market-value-translation-20260506230840 .mv-proof {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    #market-value-translation-20260506230840 .mv-proof-item {
+      display: grid;
+      place-items: center;
+      width: 108px;
+      height: 108px;
+      padding: 12px;
+      border: 2px solid rgba(13, 103, 173, 0.38);
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.86);
+      color: var(--navy);
+      font-weight: 900;
+      line-height: 1.28;
+      text-align: center;
+      box-shadow: 0 10px 28px rgba(7, 55, 99, 0.1);
+    }
+
+    #market-value-translation-20260506230840 .mv-proof-item small {
+      display: block;
+      color: var(--blue);
+      font-size: 11px;
+      font-weight: 950;
+      margin-bottom: 4px;
+    }
+
+    #market-value-translation-20260506230840 .mv-visual {
+      position: relative;
+      min-height: 430px;
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: var(--shadow);
+      border: 5px solid #fff;
+      overflow: hidden;
+    }
+
+    #market-value-translation-20260506230840 .mv-photo-card {
+      position: relative;
+      min-height: 520px;
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: var(--shadow);
+      border: 6px solid #fff;
+      overflow: hidden;
+    }
+
+    #market-value-translation-20260506230840 .mv-photo-card img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 520px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    #market-value-translation-20260506230840 .mv-photo-badge {
+      position: absolute;
+      left: 22px;
+      bottom: 22px;
+      max-width: calc(100% - 44px);
+      padding: 16px 18px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.94);
+      color: var(--navy);
+      box-shadow: 0 12px 28px rgba(7, 55, 99, 0.18);
+      font-weight: 950;
+      line-height: 1.42;
+    }
+
+    #market-value-translation-20260506230840 .mv-photo-badge small {
+      display: block;
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 950;
+      margin-bottom: 4px;
+    }
+
+    #market-value-translation-20260506230840 .mv-visual-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 20px;
+      background: var(--navy);
+      color: #fff;
+      font-weight: 900;
+    }
+
+    #market-value-translation-20260506230840 .mv-visual-body {
+      display: grid;
+      gap: 18px;
+      padding: 24px;
+      background:
+        linear-gradient(135deg, rgba(223, 244, 237, 0.95), rgba(255, 255, 255, 0.9)),
+        repeating-linear-gradient(0deg, rgba(24, 54, 87, 0.05) 0 1px, transparent 1px 38px);
+      min-height: 366px;
+    }
+
+    #market-value-translation-20260506230840 .mv-chart {
+      position: relative;
+      min-height: 168px;
+      padding: 18px;
+      border-radius: 8px;
+      background: #fff;
+      border: 1px solid var(--line);
+    }
+
+    #market-value-translation-20260506230840 .mv-chart-bars {
+      position: absolute;
+      inset: 52px 20px 20px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      align-items: end;
+      gap: 12px;
+    }
+
+    #market-value-translation-20260506230840 .mv-bar {
+      border-radius: 6px 6px 0 0;
+      background: var(--blue);
+    }
+
+    #market-value-translation-20260506230840 .mv-bar:nth-child(1) { height: 42%; opacity: 0.42; }
+    #market-value-translation-20260506230840 .mv-bar:nth-child(2) { height: 48%; opacity: 0.52; }
+    #market-value-translation-20260506230840 .mv-bar:nth-child(3) { height: 54%; opacity: 0.64; }
+    #market-value-translation-20260506230840 .mv-bar:nth-child(4) { height: 75%; background: var(--yellow); }
+    #market-value-translation-20260506230840 .mv-bar:nth-child(5) { height: 95%; background: var(--coral); }
+
+    #market-value-translation-20260506230840 .mv-translate-card {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 12px;
+      align-items: center;
+      padding: 16px;
+      border-radius: 8px;
+      background: #fff;
+      border: 1px solid var(--line);
+    }
+
+    #market-value-translation-20260506230840 .mv-mini-label {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    #market-value-translation-20260506230840 .mv-mini-text {
+      color: var(--navy);
+      font-weight: 900;
+      line-height: 1.35;
+    }
+
+    #market-value-translation-20260506230840 .mv-arrow {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--yellow);
+      color: var(--navy);
+      font-weight: 950;
+    }
+
+    #market-value-translation-20260506230840 .mv-section {
+      padding: 86px 0;
+    }
+
+    #market-value-translation-20260506230840 .mv-section.mv-soft {
+      background: var(--soft);
+    }
+
+    #market-value-translation-20260506230840 .mv-section-title {
+      text-align: center;
+      margin-bottom: 42px;
+    }
+
+    #market-value-translation-20260506230840 .mv-section-title .mv-en {
+      display: block;
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 950;
+      text-transform: uppercase;
+    }
+
+    #market-value-translation-20260506230840 .mv-section-title h2 {
+      margin-top: 7px;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.25;
+      font-weight: 950;
+      color: var(--navy);
+    }
+
+    #market-value-translation-20260506230840 .mv-section-title p {
+      margin: 16px auto 0;
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    #market-value-translation-20260506230840 .mv-worry-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    #market-value-translation-20260506230840 .mv-worry-card {
+      position: relative;
+      min-height: 168px;
+      padding: 24px 18px 20px;
+      border-radius: 8px;
+      background: #fff;
+      border: 2px solid var(--line);
+      box-shadow: 10px 10px 0 rgba(255, 212, 56, 0.54);
+    }
+
+    #market-value-translation-20260506230840 .mv-worry-card::before {
+      content: "!";
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--yellow);
+      color: var(--navy);
+      font-weight: 950;
+      margin-bottom: 14px;
+    }
+
+    #market-value-translation-20260506230840 .mv-worry-card h3 {
+      color: var(--navy);
+      font-size: 18px;
+      line-height: 1.45;
+      font-weight: 950;
+    }
+
+    #market-value-translation-20260506230840 .mv-copy {
+      max-width: 920px;
+      margin: 40px auto 0;
+      padding: 34px;
+      border-radius: 8px;
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    #market-value-translation-20260506230840 .mv-copy p + p {
+      margin-top: 18px;
+    }
+
+    #market-value-translation-20260506230840 .mv-copy strong {
+      color: var(--navy);
+      background: linear-gradient(transparent 64%, rgba(255, 212, 56, 0.8) 64%);
+    }
+
+    #market-value-translation-20260506230840 .mv-point-list {
+      display: grid;
+      gap: 24px;
+    }
+
+    #market-value-translation-20260506230840 .mv-point {
+      display: grid;
+      grid-template-columns: 150px minmax(0, 1fr);
+      gap: 26px;
+      align-items: start;
+      padding: 30px;
+      border-radius: 8px;
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    #market-value-translation-20260506230840 .mv-point-num {
+      display: grid;
+      place-items: center;
+      min-height: 126px;
+      border-radius: 8px;
+      background: var(--navy);
+      color: #fff;
+      font-weight: 950;
+      text-align: center;
+      line-height: 1.1;
+    }
+
+    #market-value-translation-20260506230840 .mv-point-num span {
+      display: block;
+      color: var(--yellow);
+      font-size: 46px;
+    }
+
+    #market-value-translation-20260506230840 .mv-point h3 {
+      margin-bottom: 12px;
+      color: var(--navy);
+      font-size: 25px;
+      line-height: 1.35;
+      font-weight: 950;
+    }
+
+    #market-value-translation-20260506230840 .mv-point p + p {
+      margin-top: 16px;
+    }
+
+    #market-value-translation-20260506230840 .mv-translation {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 20px;
+      align-items: stretch;
+      margin-top: 36px;
+    }
+
+    #market-value-translation-20260506230840 .mv-translation-box {
+      padding: 26px;
+      border-radius: 8px;
+      background: #fff;
+      border: 2px solid var(--line);
+    }
+
+    #market-value-translation-20260506230840 .mv-translation-box.mv-after {
+      border-color: var(--yellow);
+      box-shadow: 10px 10px 0 rgba(255, 212, 56, 0.42);
+    }
+
+    #market-value-translation-20260506230840 .mv-translation-box h3 {
+      margin-bottom: 12px;
+      color: var(--navy);
+      font-size: 22px;
+      font-weight: 950;
+    }
+
+    #market-value-translation-20260506230840 .mv-translation-mid {
+      display: grid;
+      place-items: center;
+      color: var(--navy);
+      font-size: 34px;
+      font-weight: 950;
+    }
+
+    #market-value-translation-20260506230840 .mv-program-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    #market-value-translation-20260506230840 .mv-program-card {
+      padding: 26px;
+      border-radius: 8px;
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    #market-value-translation-20260506230840 .mv-program-card .mv-icon {
+      display: grid;
+      place-items: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 8px;
+      background: var(--mint);
+      color: var(--navy);
+      font-size: 26px;
+      font-weight: 950;
+      margin-bottom: 16px;
+    }
+
+    #market-value-translation-20260506230840 .mv-program-card h3 {
+      margin-bottom: 10px;
+      color: var(--navy);
+      font-size: 20px;
+      line-height: 1.4;
+      font-weight: 950;
+    }
+
+    #market-value-translation-20260506230840 .mv-flow {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      counter-reset: flow;
+    }
+
+    #market-value-translation-20260506230840 .mv-flow-card {
+      position: relative;
+      padding: 28px 22px;
+      border-radius: 8px;
+      background: var(--navy);
+      color: #fff;
+      min-height: 220px;
+    }
+
+    #market-value-translation-20260506230840 .mv-flow-card::before {
+      counter-increment: flow;
+      content: "STEP " counter(flow, decimal-leading-zero);
+      display: inline-flex;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: var(--yellow);
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 950;
+      margin-bottom: 18px;
+    }
+
+    #market-value-translation-20260506230840 .mv-flow-card h3 {
+      margin-bottom: 10px;
+      color: #fff;
+      font-size: 20px;
+      line-height: 1.35;
+      font-weight: 950;
+    }
+
+    #market-value-translation-20260506230840 .mv-flow-card p {
+      color: rgba(255, 255, 255, 0.84);
+      font-size: 14px;
+    }
+
+    #market-value-translation-20260506230840 .mv-final {
+      background: linear-gradient(135deg, var(--navy), #0d263f);
+      color: #fff;
+    }
+
+    #market-value-translation-20260506230840 .mv-final-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 420px;
+      gap: 38px;
+      align-items: start;
+    }
+
+    #market-value-translation-20260506230840 .mv-final h2 {
+      color: #fff;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.28;
+      font-weight: 950;
+    }
+
+    #market-value-translation-20260506230840 .mv-final p {
+      margin-top: 18px;
+      color: rgba(255, 255, 255, 0.88);
+    }
+
+    #market-value-translation-20260506230840 .mv-cta-card {
+      padding: 28px;
+      border-radius: 8px;
+      background: #fff;
+      color: var(--ink);
+      box-shadow: 12px 12px 0 var(--yellow);
+      text-align: center;
+    }
+
+    #market-value-translation-20260506230840 .mv-cta-card h3 {
+      color: var(--navy);
+      font-size: 22px;
+      line-height: 1.35;
+      font-weight: 950;
+      margin-bottom: 12px;
+    }
+
+    #market-value-translation-20260506230840 .mv-cta-card p {
+      margin: 0 auto 22px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    #market-value-translation-20260506230840 .mv-cta-card .mv-button {
+      width: 100%;
+      min-height: 64px;
+      font-size: 18px;
+    }
+
+    #market-value-translation-20260506230840 .mv-cta-note {
+      display: block;
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.6;
+    }
+
+    #market-value-translation-20260506230840 .mv-faq {
+      display: grid;
+      gap: 12px;
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    #market-value-translation-20260506230840 .mv-faq-item {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    #market-value-translation-20260506230840 .mv-faq-q {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 20px 22px;
+      border: 0;
+      background: #fff;
+      color: var(--navy);
+      text-align: left;
+      font-weight: 950;
+      cursor: pointer;
+    }
+
+    #market-value-translation-20260506230840 .mv-faq-q span {
+      flex: 1;
+      min-width: 0;
+    }
+
+    #market-value-translation-20260506230840 .mv-faq-q::after {
+      content: "+";
+      display: grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--yellow);
+      color: var(--navy);
+      flex: 0 0 auto;
+      margin-left: 14px;
+      font-weight: 950;
+    }
+
+    #market-value-translation-20260506230840 .mv-faq-item.is-open .mv-faq-q::after {
+      content: "-";
+    }
+
+    #market-value-translation-20260506230840 .mv-faq-a {
+      display: none;
+      padding: 0 22px 22px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    #market-value-translation-20260506230840 .mv-faq-item.is-open .mv-faq-a {
+      display: block;
+    }
+
+    #market-value-translation-20260506230840 .mv-floating-cta {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 30;
+      display: none;
+      width: 236px;
+    }
+
+    @media (min-width: 1024px) {
+      #market-value-translation-20260506230840 .mv-floating-cta {
+        display: inline-flex;
+      }
+    }
+
+    @media (max-width: 960px) {
+      #market-value-translation-20260506230840 .mv-menu {
+        display: none;
+      }
+
+      #market-value-translation-20260506230840 .mv-hero {
+        min-height: 620px;
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(244, 250, 255, 0.94) 48%, rgba(244, 250, 255, 0.28) 100%),
+          linear-gradient(135deg, #eef8ff 0%, #ffffff 100%);
+      }
+
+      #market-value-translation-20260506230840 .mv-hero-copy {
+        width: min(100%, 620px);
+      }
+
+      #market-value-translation-20260506230840 .mv-final-grid,
+      #market-value-translation-20260506230840 .mv-translation {
+        grid-template-columns: 1fr;
+      }
+
+      #market-value-translation-20260506230840 .mv-translation-mid {
+        transform: rotate(90deg);
+        min-height: 42px;
+      }
+
+      #market-value-translation-20260506230840 .mv-worry-grid,
+      #market-value-translation-20260506230840 .mv-program-grid,
+      #market-value-translation-20260506230840 .mv-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      #market-value-translation-20260506230840 .mv-wrap {
+        width: min(100% - 22px, 1120px);
+      }
+
+      #market-value-translation-20260506230840 .mv-nav {
+        min-height: 68px;
+      }
+
+      #market-value-translation-20260506230840 .mv-brand {
+        font-size: 13px;
+      }
+
+      #market-value-translation-20260506230840 .mv-brand-mark {
+        width: 36px;
+        height: 36px;
+        box-shadow: 4px 4px 0 var(--navy);
+      }
+
+      #market-value-translation-20260506230840 .mv-nav .mv-button {
+        min-height: 40px;
+        padding: 9px 13px;
+        font-size: 12px;
+      }
+
+      #market-value-translation-20260506230840 .mv-hero-grid {
+        min-height: 590px;
+        align-items: flex-start;
+        padding: 34px 0 42px;
+      }
+
+      #market-value-translation-20260506230840 .mv-hero-photo img {
+        object-position: 63% bottom;
+      }
+
+      #market-value-translation-20260506230840 .mv-lead {
+        font-size: 20px;
+      }
+
+      #market-value-translation-20260506230840 .mv-hero-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      #market-value-translation-20260506230840 .mv-proof {
+        gap: 8px;
+      }
+
+      #market-value-translation-20260506230840 .mv-proof-item {
+        width: 94px;
+        height: 94px;
+        font-size: 12px;
+      }
+
+      #market-value-translation-20260506230840 .mv-hero-actions .mv-button {
+        width: 100%;
+      }
+
+      #market-value-translation-20260506230840 .mv-visual {
+        min-height: 360px;
+      }
+
+      #market-value-translation-20260506230840 .mv-photo-card,
+      #market-value-translation-20260506230840 .mv-photo-card img {
+        min-height: 380px;
+      }
+
+      #market-value-translation-20260506230840 .mv-translate-card {
+        grid-template-columns: 1fr;
+      }
+
+      #market-value-translation-20260506230840 .mv-arrow {
+        transform: rotate(90deg);
+      }
+
+      #market-value-translation-20260506230840 .mv-section {
+        padding: 58px 0;
+      }
+
+      #market-value-translation-20260506230840 .mv-worry-grid,
+      #market-value-translation-20260506230840 .mv-program-grid,
+      #market-value-translation-20260506230840 .mv-flow {
+        grid-template-columns: 1fr;
+      }
+
+      #market-value-translation-20260506230840 .mv-copy {
+        padding: 22px;
+      }
+
+      #market-value-translation-20260506230840 .mv-point {
+        grid-template-columns: 1fr;
+        padding: 22px;
+      }
+
+      #market-value-translation-20260506230840 .mv-point-num {
+        min-height: 86px;
+      }
+
+      #market-value-translation-20260506230840 .mv-final-grid {
+        gap: 26px;
+      }
+
+      #market-value-translation-20260506230840 .mv-cta-card {
+        padding: 22px;
+        box-shadow: 7px 7px 0 var(--yellow);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="market-value-translation-20260506230840">
+    <header class="mv-topbar">
+      <div class="mv-wrap mv-nav">
+        <a class="mv-brand" href="#market-value-translation-20260506230840">
+          <span class="mv-brand-mark">翻</span>
+          <span>Strategic Career<br>Coaching</span>
+        </a>
+        <nav class="mv-menu" aria-label="ページ内ナビゲーション">
+          <a href="#mv-worry">停滞の不安</a>
+          <a href="#mv-reframe">あなたのせいじゃない</a>
+          <a href="#mv-method">市場価値の翻訳</a>
+          <a href="#mv-program">6ヶ月プログラム</a>
+          <a href="#mv-contact">無料相談</a>
+        </nav>
+        <a class="mv-button" href="https://www.jicoo.com/t/ClSDLpWe1YIy/e/Zbyg3PtG" target="_blank" rel="noopener noreferrer">無料相談を予約する</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="mv-hero">
+        <div class="mv-hero-photo" aria-hidden="true">
+          <img src="assets/career-strategy-firstview-business.png" alt="">
+        </div>
+        <div class="mv-wrap mv-hero-grid">
+          <div class="mv-hero-copy">
+            <span class="mv-kicker">年収800万〜1,200万円の30代後半・40代へ</span>
+            <h1>社内評価で止まった市場価値を、<br>年収<span>1.5</span>倍へ。</h1>
+            <p class="mv-lead">大手・専門職・管理職として走ってきたのに、次の成長機会が見えないハイクラス人材のためのキャリア戦略</p>
+            <div class="mv-hero-actions">
+              <a class="mv-button" href="https://www.jicoo.com/t/ClSDLpWe1YIy/e/Zbyg3PtG" target="_blank" rel="noopener noreferrer">無料の戦略相談を予約する</a>
+              <a class="mv-button mv-yellow" href="#mv-method">市場価値の翻訳を見る</a>
+            </div>
+            <div class="mv-proof" aria-label="サービスの特徴">
+              <div class="mv-proof-item"><small>年収</small>1.5倍〜2倍を実現</div>
+              <div class="mv-proof-item"><small>担当</small>トップ<br>ヘッドハンター</div>
+              <div class="mv-proof-item"><small>保証</small>成果保証制度あり</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mv-section mv-soft" id="mv-worry">
+        <div class="mv-wrap">
+          <div class="mv-section-title">
+            <span class="mv-en">Step 1: Pain</span>
+            <h2>「このまま会社に残って、本当に大丈夫か？」</h2>
+            <p>肩書きも年収も悪くない。だからこそ誰にも言えない焦りが、夜になると胸の奥で大きくなっていませんか。</p>
+          </div>
+          <div class="mv-worry-grid">
+            <article class="mv-worry-card"><h3>正直、今の会社であと10年働く自分が想像できない</h3></article>
+            <article class="mv-worry-card"><h3>年収は悪くない。でも、成長が止まっている感覚がある</h3></article>
+            <article class="mv-worry-card"><h3>外に出た瞬間、自分の価値が通用しない気がして怖い</h3></article>
+            <article class="mv-worry-card"><h3>家族もいる。失敗できない。でも、このままも苦しい</h3></article>
+          </div>
+          <div class="mv-copy">
+            <p>「今の会社にこのままいて、5年後、10年後の自分はどうなっているだろう……」ふとした瞬間に、そんな得体の知れない不安に襲われることはありませんか？　年収は世間一般よりは高いかもしれない。周りからは「順調だね」と言われるかもしれない。でも、あなた自身の内側では、キャリアの停滞という名のじわじわとした恐怖が広がっているはずです。</p>
+            <p>今の仕事にやりがいはあるけれど、これ以上この場所で成長できる気がしない。かといって、外の世界に飛び出そうにも、自分の本当の武器が何なのか、何が市場で評価されるのかが自分でもよく分かっていない。「自分なんて、この会社という箱を出たら、ただの人になってしまうのではないか」という市場価値低下への恐怖。今の地位を失う怖さと、このまま腐っていく怖さの間で、身動きが取れなくなっている……。そんな、出口の見えないトンネルの中にいるような苦しさを、あなたは一人で抱え込んでいませんか？</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mv-section" id="mv-reframe">
+        <div class="mv-wrap">
+          <div class="mv-section-title">
+            <span class="mv-en">Step 2: Reframe</span>
+            <h2>停滞は、あなたの努力不足ではありません</h2>
+            <p>あなたを止めてきた壁は、個人の根性では越えにくい構造の問題でした。</p>
+          </div>
+          <div class="mv-point-list">
+            <article class="mv-point">
+              <div class="mv-point-num">Point<span>01</span></div>
+              <div>
+                <h3>あなたが足を止めたのには、正当な理由がある</h3>
+                <p>もし、あなたが今の状況を打破できていないとしても、それは決してあなたの努力不足や能力の欠如ではありません。むしろ、今の日本社会においては、そう感じてしまうのは極めて自然なことです。なぜなら、これまでのあなたのキャリアを阻んできた「壁」は、個人の力ではどうしようもない外部要因ばかりだったからです。</p>
+                <p>「この業界はニッチだから、他では潰しがきかない」「30代後半、40代という年齢がネックになって、もう大胆な挑戦は手遅れだ」「家族を支えなければならないから、年収を下げるようなリスクは絶対に取れない」……。これらはすべて、あなたが誠実に生きてきたからこそ突き当たる、正当な理由です。</p>
+              </div>
+            </article>
+            <article class="mv-point">
+              <div class="mv-point-num">Point<span>02</span></div>
+              <div>
+                <h3>必要だったのは、可能性を信じる戦略パートナー</h3>
+                <p>さらに、世の中の転職エージェントは「今のスキルで受かりそうな求人」を機械的に持ってくるだけ。あなたの本当の可能性を信じ、長期的な戦略を立ててくれる存在なんて、どこにもいなかった。あなたが足を止めてしまったのは、環境が、そしてこの業界の仕組みそのものが、あなたの翼を封じていたからに他なりません。</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="mv-section mv-soft" id="mv-method">
+        <div class="mv-wrap">
+          <div class="mv-section-title">
+            <span class="mv-en">Step 3: Aha Moment</span>
+            <h2>市場価値は「翻訳」で変わる</h2>
+            <p>事実は同じでも、語り方と見せ方を変えるだけで、企業があなたを見る角度は大きく変わります。</p>
+          </div>
+          <div class="mv-translation">
+            <div class="mv-translation-box">
+              <h3>翻訳前</h3>
+              <p>社内調整、部門間の橋渡し、問題が起きたときの火消し。自分では「当たり前」と感じている経験。</p>
+            </div>
+            <div class="mv-translation-mid">→</div>
+            <div class="mv-translation-box mv-after">
+              <h3>翻訳後</h3>
+              <p>複数利害関係者を巻き込む変革推進力。事業成果へ接続する戦略的リーダーシップ。</p>
+            </div>
+          </div>
+          <div class="mv-copy">
+            <p>しかし、ここで一つ、非常に重要な真実をお伝えさせてください。あなたが「自分のスキルには汎用性がない」「強みが見つからない」と感じている本当の理由は、あなたの能力が低いからではありません。実は、単に<strong>『自分の市場価値を、相手の言語に翻訳する術』</strong>を知らなかっただけなのです。</p>
+            <p>これは、キャリアにおける「翻訳の魔術」とも呼べるものです。例えば、あなたが社内で「当たり前」だと思ってやってきた調整業務や問題解決の実績。これらは、適切な「市場言語」に変換するだけで、他業界の企業からは喉から手が出るほど欲しい「戦略的リーダーシップ」へと姿を変えます。</p>
+            <p>事実は同じでも、その「語り方」と「見せ方」のフレームワークを変えるだけで、市場価値、つまり提示される年収は1.5倍から2倍近くまで劇的に変動します。キャリアが停滞していたのは、あなたが無能だったからではなく、ただ自分の価値を伝える「辞書」を持っていなかっただけ。その辞書さえ手に入れば、今の停滞は一瞬で希望に変わるのです。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mv-section">
+        <div class="mv-wrap">
+          <div class="mv-section-title">
+            <span class="mv-en">Step 4: Strategy</span>
+            <h2>求人探しではなく、戦略設計から始める</h2>
+            <p>過去の実績を分解し、市場が高値で買いたがっている言葉へ再構築する。そこから勝てる業界とシナリオを選びます。</p>
+          </div>
+          <div class="mv-point-list">
+            <article class="mv-point">
+              <div class="mv-point-num">Plan<span>01</span></div>
+              <div>
+                <h3>実績を分解し、市場のキーワードで再構築</h3>
+                <p>では、どうすればその「辞書」を手に入れ、停滞から抜け出せるのでしょうか。必要なのは、単なる求人探しではなく、極めて緻密な「戦略的アプローチ」です。まず行うべきは、表面的な職務経歴書の作成ではありません。過去の実績を一度バラバラに分解し、それを「市場が今、最も高値で買いたがっているキーワード」で再構築する徹底的な言語化作業です。</p>
+              </div>
+            </article>
+            <article class="mv-point">
+              <div class="mv-point-num">Plan<span>02</span></div>
+              <div>
+                <h3>ターゲット業界とキャリアシナリオを設計</h3>
+                <p>次に、自分の今のスキルを最大化できる「ターゲット業界」の冷徹な選定。そして、面接の場で相手の決裁者の脳を揺さぶるような、一貫したキャリアシナリオの設計が必要です。さらに、あなたを単なる「一候補者」としてではなく、「どうしても欲しい人材」として企業に売り込むためのエージェント活用術……。これらを全て自分一人で行うのは、鏡を見ずに自分の頭を完璧に散髪するようなものです。</p>
+                <p>客観的なプロの視点、それも「採用する側」と「引き抜く側」の両方の論理を知り尽くしたパートナーと共に、戦略的に駒を進めていくことこそが、唯一の確実なルートなのです。</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="mv-section mv-soft" id="mv-program">
+        <div class="mv-wrap">
+          <div class="mv-section-title">
+            <span class="mv-en">Step 5: Coaching</span>
+            <h2>6ヶ月で、理想のキャリアと妥協のない年収アップへ</h2>
+            <p>現役トップヘッドハンターと元人事責任者が、あなたの軍師として内定の瞬間まで伴走します。</p>
+          </div>
+          <div class="mv-program-grid">
+            <article class="mv-program-card">
+              <div class="mv-icon">01</div>
+              <h3>ダブル担当制</h3>
+              <p>現役のトップヘッドハンターと元人事責任者が、採用側と引き抜く側の両面から戦略を設計します。</p>
+            </article>
+            <article class="mv-program-card">
+              <div class="mv-icon">02</div>
+              <h3>職務経歴書の添削は無制限</h3>
+              <p>あなたの強みを引き出し、決裁者に刺さる市場言語へ磨き込みます。</p>
+            </article>
+            <article class="mv-program-card">
+              <div class="mv-icon">03</div>
+              <h3>模擬面接10回以上</h3>
+              <p>面接官が何を質問し、どこで合否を決めるのかを、腑に落ちるまで叩き込みます。</p>
+            </article>
+          </div>
+          <div class="mv-copy">
+            <p>もしあなたが、最短ルートで「理想のキャリア」と「妥協のない年収アップ」を実現したいなら、私たちのハイクラス向け戦略的キャリアコーチングがお役に立てます。この6ヶ月プログラムは、現役のトップヘッドハンターと元人事責任者がダブルであなたの担当に就く、極めて贅沢で実戦的な内容です。</p>
+            <p>あなたはもう、一人で悩む必要はありません。あなたの強みを引き出す職務経歴書の添削は「無制限」。本番さながらの模擬面接は10回以上行い、面接官が何を質問し、どこで合否を決めるのかを完全に腑に落ちるまで叩き込みます。内定が出るその瞬間まで、私たちがあなたの軍師として伴走し続けます。</p>
+            <p>万が一、期間内に成果が出ない場合の保証制度も用意しました。これは、あなたのキャリアを絶対に停滞させないという私たちの覚悟の証です。一人で悩み、市場価値を下げ続けるリスクを今すぐ捨てて、あなたの真の価値を世界に証明する一歩を踏み出しませんか？ まずは無料の戦略カウンセリングで、あなたの「翻訳前」の宝物を私に見せてください。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mv-section">
+        <div class="mv-wrap">
+          <div class="mv-section-title">
+            <span class="mv-en">Flow</span>
+            <h2>無料相談から伴走開始までの流れ</h2>
+          </div>
+          <div class="mv-flow">
+            <article class="mv-flow-card">
+              <h3>無料相談</h3>
+              <p>現状の不安、年収、これまでの実績、動けない理由を整理します。</p>
+            </article>
+            <article class="mv-flow-card">
+              <h3>市場価値の仮説化</h3>
+              <p>あなたの経験を採用側の言葉に置き換え、勝ち筋の候補を出します。</p>
+            </article>
+            <article class="mv-flow-card">
+              <h3>6ヶ月戦略設計</h3>
+              <p>狙う業界、求人、職務経歴書、面接シナリオを組み立てます。</p>
+            </article>
+            <article class="mv-flow-card">
+              <h3>実戦伴走</h3>
+              <p>応募、面接、条件交渉、内定獲得まで継続的に支援します。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="mv-section mv-soft">
+        <div class="mv-wrap">
+          <div class="mv-section-title">
+            <span class="mv-en">FAQ</span>
+            <h2>よくある質問</h2>
+          </div>
+          <div class="mv-faq">
+            <div class="mv-faq-item is-open">
+              <button class="mv-faq-q" type="button"><span>転職するか決めていなくても相談できますか？</span></button>
+              <div class="mv-faq-a">はい。転職を急がせる場ではありません。まずは今の市場価値と、動くべきタイミングを冷静に整理します。</div>
+            </div>
+            <div class="mv-faq-item">
+              <button class="mv-faq-q" type="button"><span>ニッチな業界経験でも対象になりますか？</span></button>
+              <div class="mv-faq-a">対象です。ニッチな経験ほど、翻訳次第で他業界に刺さる価値へ変えられる可能性があります。</div>
+            </div>
+            <div class="mv-faq-item">
+              <button class="mv-faq-q" type="button"><span>年収を下げる転職は避けたいです。</span></button>
+              <div class="mv-faq-a">その前提で戦略を組みます。家族や生活を支える責任を無視した提案は行いません。</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mv-section mv-final" id="mv-contact">
+        <div class="mv-wrap mv-final-grid">
+          <div>
+            <span class="mv-kicker">無料の戦略カウンセリング</span>
+            <h2>あなたの「翻訳前」の宝物を、まずは見せてください。</h2>
+            <p>一人で悩み、市場価値を下げ続けるリスクを今すぐ捨てて、あなたの真の価値を世界に証明する一歩を踏み出しませんか？</p>
+            <p>予約ボタンから、無料の戦略カウンセリングへ進めます。</p>
+          </div>
+          <div class="mv-cta-card">
+            <h3>無料相談はこちら</h3>
+            <p>あなたの経験を、市場価値へ翻訳する第一歩です。</p>
+            <a class="mv-button" href="https://www.jicoo.com/t/ClSDLpWe1YIy/e/Zbyg3PtG" target="_blank" rel="noopener noreferrer">無料で戦略相談を申し込む</a>
+            <span class="mv-cta-note">外部ツール側の予約ページURLにリンクを差し替えてください。</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <a class="mv-button mv-floating-cta" href="https://www.jicoo.com/t/ClSDLpWe1YIy/e/Zbyg3PtG" target="_blank" rel="noopener noreferrer">無料相談を予約する</a>
+  </div>
+
+  <script>
+    (function () {
+      var root = document.getElementById('market-value-translation-20260506230840');
+      if (!root) return;
+
+      root.querySelectorAll('a[href^="#"]').forEach(function (link) {
+        link.addEventListener('click', function (event) {
+          var target = root.querySelector(link.getAttribute('href'));
+          if (!target && link.getAttribute('href') === '#market-value-translation-20260506230840') {
+            target = root;
+          }
+          if (!target) return;
+          event.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+
+      root.querySelectorAll('.mv-faq-q').forEach(function (button) {
+        button.addEventListener('click', function () {
+          var item = button.closest('.mv-faq-item');
+          if (item) item.classList.toggle('is-open');
+        });
+      });
+
+    }());
+  </script>
+</body>
+</html>
